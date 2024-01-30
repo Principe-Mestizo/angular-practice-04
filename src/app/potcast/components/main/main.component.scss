@@ -1,0 +1,29 @@
+@use '../../../../styles/variables' as v;
+@use '../../../../styles/mixins' as m;
+
+
+.contenedor {
+  padding: 5rem 0;
+  @include m.tablet{
+    padding: 8rem 0;
+  }
+  .crea-grid {
+    @include m.tablet{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
+      align-items: center;
+    }
+  }
+
+  .contenido {
+    h2 {
+      font-weight: 700;
+      @include m.headingBorder( v.$secundario, v.$primario );
+    }
+    p {
+      font-size: 1.9rem;
+      line-height: 2.3;
+    }
+  }
+}

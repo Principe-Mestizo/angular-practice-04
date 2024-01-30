@@ -1,0 +1,42 @@
+@use '../../../../styles/variables' as v;
+@use '../../../../styles/mixins' as m;
+
+.site-header {
+   background-image: linear-gradient(rgba(235, 231, 231, 0.473) 0%, v.$secundario 100%), url(/assets/img/header.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   padding: 5rem 0;
+   background-position: top center;
+
+   .logo {
+      max-width: 20rem;
+      margin: 0 auto;
+
+      @include m.tablet {
+         margin: 0;
+      }
+   }
+
+   .contenido-header {
+      margin-top: 10rem;
+
+      @include m.tablet {
+         margin-top: 15rem;
+      }
+
+      h1 {
+         color: v.$blanco;
+         font-size: 4.5rem;
+         @include m.tablet {
+            font-size: 6rem;
+            max-width: 40%;
+         }
+
+      }
+   }
+}
+
+.boton-primario {
+   @include m.boton(v.$primario, v.$secundario);
+
+}
